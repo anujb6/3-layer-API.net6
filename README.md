@@ -1,1 +1,1 @@
-layered-api.net-main
+this is a 3 layer API with JWT authentication, After registering and loging in a single JWT token with role as Username and name as user.userName then we can assign authorization to the API as per the name in Controller for multiple routes 
