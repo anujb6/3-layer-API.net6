@@ -67,6 +67,31 @@ namespace WebAPI2.Controllers
             return await _BLL.Delete(id);
 
         }
+/*
+using System.IO;
 
+[HttpPost]
+public async Task<IActionResult> Post(IFormFile file)
+{
+	if (file.Length <= 0)
+		return BadRequest("Empty file");
+
+	//Strip out any path specifiers (ex: /../)
+	var originalFileName = Path.GetFileName(file.FileName);
+
+	//Create a unique file path
+	var uniqueFileName = Path.GetRandomFileName();
+	var uniqueFilePath = Path.Combine(@"C:\temp\", uniqueFileName);
+
+	//Save the file to disk
+	using (var stream = System.IO.File.Create(uniqueFilePath))
+	{
+		await file.CopyToAsync(stream);
+	}
+
+	return Ok($"Saved file {originalFileName} with size {file.Length / 1024m:#.00} KB using unique name {uniqueFileName}");
+}
+
+*/
     }
 }
